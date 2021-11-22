@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Multi material</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.min.js" integrity="sha512-XdUZ5nrNkVySQBnnM5vzDqHai823Spoq1W3pJoQwomQja+o4Nw0Ew1ppxo5bhF2vMug6sfibhKWcNJsG8Vj9tg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+   <div class="mainOuterDiv">
+     <h1> Multi material to Swapper Gcode Converter</h1>
+     <div class="formPrinter">
+      <span>Your 3D printer bed sizes</span>
+      <label for="bedX">X</label><input id="bedX" type="number" min="0" class="inputBox smallInput" placeholder="0">
+      <label for="bedY">Y</label><input id="bedY" type="number" min="0" class="inputBox smallInput" placeholder="0">
+     </div>
+     <div class= "formsSectionDiv">
+      <div class="form formName">
+        <span>Led color and text to display</span>
+        <div v-for="colore in colori" class="formNameDiv">
+          <label :for=colore.filhex>{{colore.hex}}</label><input :id=colore.filhex type="color" :value=colore.hex class="colorInput">
+          <label :for=colore.filnome>Filament {{colore.numero}}</label><input :id=colore.filnome type="text" class="inputBox" :placeholder=colore.nome>
+        </div>
+      </div>
+      <div class="form formPosition">
+        <span>Position of filament change</span>
+        <div v-for="colore in colori" class="formPositionDiv">
+          <label :for=colore.filx>X</label><input :id=colore.filx type="number" min="0" class="inputBox smallInput">
+          <label :for=colore.fily>Y</label><input :id=colore.fily type="number" min="0" class="inputBox smallInput">
+        </div>
+      </div>
+     </div>
+     <div class="formUpDo">
+      <label for="file-upload" class="inputBox fileInput"><i class="fa fa-cloud-upload"></i> Upload File</label><input id="file-upload" type="file">
+     </div>
+   </div>
+   <script src="script.js"> </script>
+ </body>
+</html>

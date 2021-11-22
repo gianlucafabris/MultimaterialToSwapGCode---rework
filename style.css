@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+html,body,.mainOuterDiv,.selector{
+  background-color: #000000;
+}
+html,body,.inputBox,.selector{
+  color: #ffffff;
+}
+html,body,.inputBox,input::placeholder,.smallInput,.selector{
+  font-size: 16px;
+}
+html,body{
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+.mainOuterDiv,.formPrinter,.formsSectionDiv,.form,.form div,.formUpDo{
+  display: flex;
+}
+.mainOuterDiv,.form{
+  flex-direction: column;
+}
+.formsSectionDiv,.form div{
+  flex-direction: row;
+}
+.mainOuterDiv, .formsSectionDiv{
+  height: auto;
+}
+h1{
+  font-size: 32px;
+  margin-left: 10px;
+}
+.formPrinter,.form,.form div{
+  align-items: center;
+}
+.formPrinter,.form,.formUpDo{
+  flex: 1;
+}
+.form{
+  justify-content: flex-start;
+}
+.form.formName{
+  align-items: flex-end;
+}
+.form.formName span,.formNameDiv{
+  margin: 0px 50px 0px 10px;
+}
+.form.formPosition{
+  align-items: flex-start;
+}
+.form.formPosition span,.formPositionDiv{
+  margin: 0px 10px 0px 50px;
+}
+label{
+  margin: 0px 10px 0px 20px;
+}
+.colorInput,.inputBox,.fileInput,.selector{
+  background-color: #242526;
+}
+.colorInput,.inputBox,.selector{
+  border: 0;
+  border-radius: 5px;
+}
+.colorInput{
+  padding: 0 2px 0 2px;
+  width: 44px;
+  height: 48px;
+}
+.inputBox,.selector{
+  padding: 16px;
+}
+.inputBox,.smallInput{
+  margin: 10px 0px 0px 0px;
+}
+.inputBox{
+  width: 250px;
+  height: 16px;
+}
+input::placeholder{
+  color: #747474;
+}
+.smallInput{
+  width: 75px;
+}
+.formPrinter,.formUpDo{
+  justify-content: center;
+}
+.fileInput{
+  margin: 10px 20px 10px 0px;
+}
+.fileInput:hover{
+  cursor: pointer;
+}
+input[type="file"]{
+  display: none;
+}
+.selector{
+  margin: 10px 0px 10px 20px;
+  height: 48px;
+  width: 150px;
+}
